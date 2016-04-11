@@ -1,8 +1,9 @@
 <h1>Products#index</h1>
-
+  <%= link_to "Sign up", new_user_path %><br>
+    <%= link_to "Log In", new_session_path %><br>
 
 <%=@products.each do |product| %>
   <%= link_to product.name, product_path(product) %><br>
 
-  <%=product.description%>,<%=product.price_in_cents%></p>
+  <%=product.description%>,<%=product.formatted_price%></p>
 <%end%>
